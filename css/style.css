@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: "Outfit",sans-serif;
+  background-color: var(--main-bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root{
+  --main-bg:hsl(217, 54%, 11%);
+  --card-bg:hsl(216, 50%, 16%);
+  --line-color:hsl(215, 32%, 27%);
+  --white-color:hsl(0, 0%, 100%);
+  --cyan-color:hsl(178, 100%, 50%);
+  --soft-blue:hsl(215, 51%, 70%);
+}
+ 
+
+.nft-card{
+  background-color: var(--card-bg);
+  padding: 30px;
+  max-width: 420px;
+}
+
+
+.nft-image{
+  height: 300px;
+  max-width: 400px;
+  position: relative;
+}
+
+.equilibrium-img{
+  width:100%;
+  height: 100%;
+  border-radius: 14px;
+  transition: 0.5s ease;  
+}
+
+.nft-image:hover .overlay{
+  background-color: rgb(0, 255, 247,0.5);
+  position: absolute;
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius: 14px;
+  transition: 0.5s ease;  
+}
+
+.icon-view{
+  position: absolute;
+  right: 43%;
+  top: 43%;
+  z-index: -1;
+}
+
+.nft-image:hover .icon-view{
+  z-index: 2;
+  transition: 0.5s ease;
+}
+
+
+h2{
+  color: var(--white-color);
+  margin: 20px 0;
+  transition: 0.4s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+
+h2:hover{
+  color: var(--cyan-color);
+}
+
+p{
+  color: var(--soft-blue);
+  font-size: 18px;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 20px 0;
+}
+
+.ethereum-amount,.duration{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ethereum-amount span{
+  color: var(--cyan-color);
+  font-size: 20px;
+}
+
+.duration span{
+  color: var(--soft-blue);
+}
+
+hr{
+  border: none;
+  height: 1px;
+  background-color: var(--line-color);
+  
+  margin-bottom: 20px;
+}
+
+.creator{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--white-color);
+}
+
+.creator span{
+  color: var(--white-color);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.creator span:hover{
+  color: var(--cyan-color);
+}
+
+
+@media screen and (max-width:470px){
+  body{
+    padding: 0 20px;
+  }
+
+  .nft-card{
+    padding: 20px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+}
+
+
+ 
